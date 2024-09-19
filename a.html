@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        #wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #resultados {
+            width: 200px;
+            height: 404px;
+            background: black;
+            border-radius: 6px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        #resultados p {
+            line-height: 18px;
+            padding: 0;
+            margin: 0;
+        }
+
+        #calculadora {
+            box-shadow: 17px 16px 14px 3px rgba(0, 0, 0, 0.66);
+            width: 250px;
+            height: 400px;
+            gap: 5px;
+            padding: 12px;
+            border-radius: 6px;
+            display: grid;
+            grid-template-areas:
+                "visor visor visor visor"
+                "limpar limpar dividir multiplicar"
+                "sete oito nove menos"
+                "quatro cinco seis mais"
+                "um dois tres igual"
+                "zero zero ponto igual";
+            background: linear-gradient(135deg, #87CEEB, #FF69B4);
+        }
+
+        .btn {
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 18px;
+
+        }
+
+        .btn:hover {
+            background-color: darkviolet;
+        }
+
+        .visor {
+            background-color: #00CED1;
+            color: black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 4px;
+            grid-area: visor;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="resultados">
+            <p id="displayResultados">Resultados e números digitados aqui</p>
+        </div>
+        <div id="calculadora">
+            <div class="visor" id="visor">0</div>
+            <div class="btn" style="grid-area: zero">0</div>
+            <div class="btn" style="grid-area: um">1</div>
+            <div class="btn" style="grid-area: dois">2</div>
+            <div class="btn" style="grid-area: tres">3</div>
+            <div class="btn" style="grid-area: quatro">4</div>
+            <div class="btn" style="grid-area: cinco">5</div>
+            <div class="btn" style="grid-area: seis">6</div>
+            <div class="btn" style="grid-area: sete">7</div>
+            <div class="btn" style="grid-area: oito">8</div>
+            <div class="btn" style="grid-area: nove">9</div>
+            <div class="btn" style="grid-area: ponto">.</div>
+            <div class="btn" style="grid-area: igual">=</div>
+            <div class="btn" style="grid-area: mais">+</div>
+            <div class="btn" style="grid-area: menos">-</div>
+            <div class="btn" style="grid-area: multiplicar">*</div>
+            <div class="btn" style="grid-area: dividir">/</div>
+            <div class="btn" style="grid-area: limpar">C</div>
+        </div>
+    </div>
+    <script src="b.js"></script>
+</body>
+
+</html>
